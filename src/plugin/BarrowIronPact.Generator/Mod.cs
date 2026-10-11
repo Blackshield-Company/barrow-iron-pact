@@ -13,7 +13,7 @@ internal static class ModInfo
     public const string PluginName = "BarrowIronPact.esp";
     public const string Description = "The Barrow-Iron Pact: ancient Nord barrow-iron, a Riverwood smith, three choices and awakenable gear.";
 
-    const int APlayer = 0, AKjeld = 1, ACryptLoc = 2, ACryptMarker = 3, AWarden = 4, AIron = 5, ARite = 6;
+    const int APlayer = 0, AKjeld = 1, ACryptLoc = 2, ACryptMarker = 3, AWarden = 4, AIron = 5, ARite = 6, AWardenBoss = 7;
     const int IPlayer = 0, IMarker = 1, IKjeld = 2;
 
     public static void Build(Kit k)
@@ -92,12 +92,22 @@ internal static class ModInfo
         main.Aliases.Add(Created(AWarden, "Warden", warden.FormKey, ACryptMarker, false, Level.VeryHard, QuestAlias.Flag.StoresText));
         main.Aliases.Add(Created(AIron, "Iron", iron.FormKey, AWarden, true, Level.Easy, QuestAlias.Flag.QuestObject));
         main.Aliases.Add(Created(ARite, "Rite", rite.FormKey, AWarden, true, Level.Easy, 0));
+        // 0.1.1: the crypt's boss spot (optional); the script moves the Warden there.
+        main.Aliases.Add(new QuestAlias
+        {
+            ID = AWardenBoss, Type = QuestAlias.TypeEnum.Reference, Name = "WardenBoss",
+            Flags = QuestAlias.Flag.Optional | QuestAlias.Flag.AllowDead | QuestAlias.Flag.AllowDisabled,
+            Location = new LocationAliasReference { AliasID = ACryptLoc, RefType = N<ILocationReferenceTypeGetter>(RefTypeBoss) },
+        });
         main.NextAliasID = (uint)main.Aliases.Count;
         main.VirtualMachineAdapter = Vmad.QuestAdapter(Vmad.Script("BIP_MainScript",
+                Vmad.Alias("Warden", qMain, AWarden), Vmad.Alias("WardenBoss", qMain, AWardenBoss), Vmad.Alias("Rite", qMain, ARite),
+                Vmad.Obj("BIP_IronItem", iron.FormKey), Vmad.Obj("BIP_RiteItem", rite.FormKey),
                 Vmad.Alias("Kjeld", qMain, AKjeld), Vmad.Alias("Iron", qMain, AIron),
                 Vmad.Obj("BIP_State", gState), Vmad.Obj("BIP_Form", gForm),
                 Vmad.Obj("BIP_BarrowPlate", plate.FormKey), Vmad.Obj("BIP_BarrowBlade", sword.FormKey),
                 Vmad.Obj("BIP_AncestorTorc", torc.FormKey), Vmad.Obj("BIP_AncestorRegard", regard)))
+            .WithAliasScripts(qMain, AWarden, Vmad.Script("BIP_WardenAliasScript"))
             .WithAliasScripts(qMain, AIron, Vmad.Script("BIP_IronAliasScript"))
             .WithAliasScripts(qMain, ARite, Vmad.Script("BIP_RiteAliasScript"));
 
@@ -132,6 +142,9 @@ internal static class ModInfo
 
         var tStatus = k.TopTopic("BIP_K_Status", qMain, T.TopicStatus, sKjeld);
         k.Info(tStatus, "BIP_K_Status10", T.Status10, new[] { isKjeld, St(CompareOperator.EqualTo, 10) });
+        // 0.1.1: unstick for saves where the Warden never had the iron (works on 0.1.0 saves).
+        var tRecover = k.TopTopic("BIP_K_Recover", qMain, T.TopicRecover, sKjeld);
+        k.Info(tRecover, "BIP_K_RecoverInfo", T.Recover, new[] { isKjeld, St(CompareOperator.EqualTo, 10), PlayerHas(rite.FormKey), PlayerLacks(iron.FormKey) }, goodbye: true, fragment: "BIP_TIF_Recover");
         k.Info(tStatus, "BIP_K_Status40", T.Status40, new[] { isKjeld, St(CompareOperator.EqualTo, 40) });
 
         var bChoice = k.Id("BIP_ChoiceBranch");
@@ -183,6 +196,8 @@ internal static class T
     public static readonly string[] Decline = { "A fair answer. Maybe the wisest one. Come back if you change your mind." };
 
     public const string TopicStatus = "About the barrow-iron...";
+    public const string TopicRecover = "The Warden had no iron on him. Only this burial rite.";
+    public static readonly string[] Recover = { "No iron? Let me see that rite. Ha. It says where they laid it, under his bier. Here, I'd wager this is it. Bring it back when you're ready." };
     public static readonly string[] Status10 = { "<Alias=CryptLoc>. The Warden won't give it up. Nobody's ever asked him nicely." };
     public static readonly string[] Status40 = { "Two days at the forge. Barrow-iron fights the hammer." };
 

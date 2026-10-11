@@ -4,7 +4,7 @@ Game: Skyrim Special Edition
 
 Mod name: The Barrow-Iron Pact
 
-Version: 0.1.0 (early beta)
+Version: 0.1.1 (early beta)
 
 Category: Quests and Adventures
 
@@ -12,9 +12,9 @@ Short summary (240 chars):
 Take ancient barrow-iron from a Hollow Warden for the last barrow-smith near Riverwood. Forge plate or a greatsword and awaken it later with dragon bone, or honor the old pact and give it back. Unvoiced. Base game, ESL, no SKSE. Early beta.
 
 Main file:
-- File: BarrowIronPact-0.1.0.zip (FOMOD installer)
+- File: BarrowIronPact-0.1.1.zip (FOMOD installer)
 - File name: The Barrow-Iron Pact
-- File version: 0.1.0
+- File version: 0.1.1
 - File category: Main Files
 - File description: Early beta. FOMOD installer with BarrowIronPact.esp (ESL-flagged), compiled scripts, SEQ file, silent voice files for the unvoiced dialogue, and optional Papyrus sources. Requires only Skyrim Special Edition / Anniversary Edition (1.5.97 or 1.6.x).
 

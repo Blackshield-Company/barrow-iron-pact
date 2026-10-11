@@ -1,24 +1,24 @@
 # Nexus Mods page: The Barrow-Iron Pact
 
-Early beta: v0.1.0 passed every automated build check but hasn't been playtested in-game. Exact upload-form values are in [NEXUS_FIELDS.md](NEXUS_FIELDS.md).
+Early beta: v0.1.1 passed every automated build check but hasn't been playtested in-game. Exact upload-form values are in [NEXUS_FIELDS.md](NEXUS_FIELDS.md).
 
 ## Page settings
 
 - **Game:** Skyrim Special Edition
 - **Mod name:** The Barrow-Iron Pact
-- **Version:** 0.1.0 (early beta)
+- **Version:** 0.1.1 (early beta)
 - **Category:** Quests and Adventures
 - **Suggested tags:** Quests, Lore-Friendly, Dialogue, Choices and Consequences, Armour, Weapons, ESL, No SKSE, Scripted
 - **Requirements:** none.
 - **Permissions (suggested):** source on GitHub under MIT; allow modification with credit, no re-uploads of the archive.
-- **File to upload:** `BarrowIronPact-0.1.0.zip` (FOMOD), main file, named "The Barrow-Iron Pact".
+- **File to upload:** `BarrowIronPact-0.1.1.zip` (FOMOD), main file, named "The Barrow-Iron Pact".
 
 ## Description (paste into the BBCode editor)
 
 Same text as `nexus/bip-description.txt` in the workspace:
 
 ```bbcode
-[center][color=#e06c3c][b]EARLY RELEASE (v0.1.0)[/b]: new mod, not yet widely playtested. Please report bugs in the Bugs tab with your Papyrus log lines (grep BIP_). Source: [url=https://github.com/synthalorian/barrow-iron-pact]GitHub[/url][/color][/center]
+[center][color=#e06c3c][b]EARLY RELEASE (v0.1.1)[/b]: new mod, not yet widely playtested. Please report bugs in the Bugs tab with your Papyrus log lines (grep BIP_). Source: [url=https://github.com/synthalorian/barrow-iron-pact]GitHub[/url][/color][/center]
 
 [center][size=6][b]THE BARROW-IRON PACT[/b][/size]
 [size=3][i]Iron that never rusts, a warden who never sleeps, and a pact older than Skyrim's kings.[/i][/size][/center]
@@ -26,7 +26,7 @@ Same text as `nexus/bip-description.txt` in the workspace:
 [line]
 
 [size=4][b]Summary[/b][/size]
-[b]Status: Early beta (v0.1.0).[/b] Every automated build check passes, but it hasn't had wide in-game playtesting yet. It's playable now. Bug reports help shape 0.1.x.
+[b]Status: Early beta (v0.1.1).[/b] Every automated build check passes, but it hasn't had wide in-game playtesting yet. It's playable now. Bug reports help shape 0.1.x.
 An ancient-armor reforging quest. [b]Kjeld Barrow-Smith[/b], last of the smiths who forged for the dead, waits near [b]Riverwood[/b]. A Hollow Warden still guards a cache of barrow-iron in an old crypt.
 
 [size=4][b]The quest[/b][/size]

@@ -191,7 +191,7 @@ internal static class T
         "Bring me the iron and I'll forge you something the world hasn't seen in a thousand years. Will you go?",
     };
     public const string TopicAccept = "I'll bring you the barrow-iron.";
-    public static readonly string[] Accept = { "The Warden sleeps at <Alias=CryptLoc>. He'll wake when you touch the iron. Don't let him take you back down with him." };
+    public static readonly string[] Accept = { "The Warden sleeps in a crypt I've marked on your map. He'll wake when you touch the iron. Don't let him take you back down with him." };
     public const string TopicDecline = "Leave the dead their iron.";
     public static readonly string[] Decline = { "A fair answer. Maybe the wisest one. Come back if you change your mind." };
 

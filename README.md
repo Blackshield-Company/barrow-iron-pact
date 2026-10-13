@@ -78,6 +78,13 @@ set BIP_MinLevel to 14
 
 Current build: 60 new records (FormIDs 800-83B): Armor 3, Book 1, DialogBranch 5, DialogResponses 17, DialogTopic 10, Faction 1, FormList 1, GlobalFloat 6, MagicEffect 1, Message 2, MiscItem 1, Npc 2, ObjectEffect 5, Quest 2, Spell 1, Weapon 2; 12 Papyrus scripts; 26 silent voice files; 1 SEQ entry.
 
+## Support
+
+Donations are optional. Nothing in the mod is gated on them.
+
+- GitHub Sponsors: https://github.com/sponsors/synthalorian
+- Ko-fi: https://ko-fi.com/synthalorian
+
 ## Credits
 
 - Built with [Mutagen](https://github.com/Mutagen-Modding/Mutagen) and [russo-2025/papyrus-compiler](https://github.com/russo-2025/papyrus-compiler).

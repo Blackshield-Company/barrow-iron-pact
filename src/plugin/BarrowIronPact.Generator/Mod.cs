@@ -198,7 +198,7 @@ internal static class T
     public const string TopicStatus = "About the barrow-iron...";
     public const string TopicRecover = "The Warden had no iron on him. Only this burial rite.";
     public static readonly string[] Recover = { "No iron? Let me see that rite. Ha. It says where they laid it, under his bier. Here, I'd wager this is it. Bring it back when you're ready." };
-    public static readonly string[] Status10 = { "<Alias=CryptLoc>. The Warden won't give it up. Nobody's ever asked him nicely." };
+    public static readonly string[] Status10 = { "The crypt is marked on your map. The Warden won't give it up. Nobody's ever asked him nicely." };
     public static readonly string[] Status40 = { "Two days at the forge. Barrow-iron fights the hammer." };
 
     public const string TopicIron = "I have the barrow-iron.";

@@ -2,6 +2,16 @@
 
 All notable changes to this project are documented here. Versions follow [Semantic Versioning](https://semver.org/).
 
+## [0.1.3] - 2026-10-14
+
+Still early beta, not yet playtested in game. Save-compatible with 0.1.2 (no records added or removed, no form IDs changed).
+
+### Fixed
+- Kjeld's status line after you accept could show a raw location tag (`<Alias=CryptLoc>`). It no longer uses a tag; the crypt is still named in the journal and objective.
+
+### Changed
+- The build check now fails on any `<Alias=...>` tag in dialogue (responses, prompts, topic text) or quest text (name, journal, objectives) that is not a filled, non-optional alias of the quest that owns the text, and on alias-created notes whose tags would not resolve.
+
 ## [0.1.2] - 2026-10-13
 
 Still early beta, not yet playtested in game.

@@ -1,3 +1,5 @@
+![barrow-iron-pact](.github/preview.png)
+
 # The Barrow-Iron Pact
 
 *Iron that never rusts, a warden who never sleeps, and a pact older than Skyrim's kings.*

@@ -18,7 +18,7 @@ Early beta: v0.1.3 passed every automated build check but hasn't been playtested
 Same text as `nexus/bip-description.txt` in the workspace:
 
 ```bbcode
-[center][color=#e06c3c][b]EARLY RELEASE (v0.1.3)[/b]: new mod, not yet widely playtested. Please report bugs in the Bugs tab with your Papyrus log lines (grep BIP_). Source: [url=https://github.com/synthalorian/barrow-iron-pact]GitHub[/url][/color][/center]
+[center][color=#e06c3c][b]EARLY RELEASE (v0.1.3)[/b]: new mod, not yet widely playtested. Please report bugs in the Bugs tab with your Papyrus log lines (grep BIP_). Source: [url=https://github.com/Blackshield-Company/barrow-iron-pact]GitHub[/url][/color][/center]
 
 [center][size=6][b]THE BARROW-IRON PACT[/b][/size]
 [size=3][i]Iron that never rusts, a warden who never sleeps, and a pact older than Skyrim's kings.[/i][/size][/center]
@@ -94,7 +94,7 @@ Install with [b]Mod Organizer 2[/b] or [b]Vortex[/b] (FOMOD installer) and enabl
 As with any scripted mod, finish the quest before removing it.
 
 [size=4][b]Source[/b][/size]
-Open source (MIT): [url=https://github.com/synthalorian/barrow-iron-pact]github.com/synthalorian/barrow-iron-pact[/url]
+Open source (MIT): [url=https://github.com/Blackshield-Company/barrow-iron-pact]github.com/Blackshield-Company/barrow-iron-pact[/url]
 
 [size=4][b]Credits[/b][/size]
 [list]
